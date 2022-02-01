@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/plepe/bike-route-network/issues"
   },
-  "homepage": "https://github.com/plepe/bike-route-network#readme"
+  "homepage": "https://github.com/plepe/bike-route-network#readme",
+  "dependencies": {
+    "overpass-frontend": "git+https://github.com/plepe/overpass-frontend.git#history",
+    "overpass-layer": "git+https://github.com/plepe/overpass-layer.git#history"
+  }
 }
