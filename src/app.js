@@ -30,20 +30,19 @@ function init () {
 
   const overpassLayer = new OverpassLayer({
     overpassFrontend,
-    query: 'way[highway=cycleway];',
+    query: {
+      10: 'way[highway=cycleway];',
+      14: '(way[highway=cycleway];way[cycleway];)'
+    },
     minZoom: 10,
     feature: {
-      style: {
-        color: 'blue',
-        width: 3,
-        opacity: 1
-      },
       markerSymbol: null,
-      title: '{{ tags.name }}',
-      body: function (ob) {
-        return '<pre>' + JSON.stringify(ob.tags, null, '  ') + '</pre>'
+      "style": {
+          "width": "{% if tags.highway == 'cycleway' %}2{% elseif tags.highway == 'living_street' %}5{% else %}0{% endif %}",
+          "color": "{% if tags.highway == 'cycleway' %}blue{% elseif tags.highway == 'living_street' %}lightgreen{% else %}black{% endif %}",
       }
     }
   })
+
   overpassLayer.addTo(map)
 }
