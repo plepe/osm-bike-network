@@ -5,3 +5,15 @@
   right: 0;
   left: 0;
 }
+#date-selector {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 10000;
+  background: white;
+  border: 1px solid black;
+}
+#date-selector input {
+  width: 6em;
+  text-align: center;
+}

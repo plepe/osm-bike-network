@@ -3,6 +3,8 @@ const OverpassFrontend = require('overpass-frontend')
 const OverpassLayer = require('overpass-layer')
 const yaml = require('yaml')
 
+const dateSelector = require('./dateSelector')
+
 let map
 let overpassFrontend
 
@@ -13,6 +15,8 @@ window.onload = function () {
       conf = yaml.parse(body)
       init()
     })
+
+  dateSelector.init()
 }
 
 function init () {
@@ -44,5 +48,10 @@ function init () {
     }
   })
 
+  overpassLayer.setQueryOptions({ date: dateSelector.value() })
   overpassLayer.addTo(map)
+
+  dateSelector.on('change', (value) => {
+    overpassLayer.setQueryOptions({ date: value })
+  })
 }
