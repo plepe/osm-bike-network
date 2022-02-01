@@ -17,3 +17,24 @@
   width: 6em;
   text-align: center;
 }
+
+#disclaimer {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 20%;
+  bottom: 20%;
+  z-index: 10000;
+  background: white;
+  border: 1px solid black;
+  padding: 1em;
+}
+#disclaimer ul > li {
+  list-style: none;
+}
+#disclaimer > .closeButton {
+  display: block;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}

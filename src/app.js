@@ -17,6 +17,13 @@ window.onload = function () {
     })
 
   dateSelector.init()
+
+  const closeButton = document.createElement('a')
+  closeButton.innerHTML = '✖'
+  closeButton.className = 'closeButton'
+  const disclaimer = document.getElementById('disclaimer')
+  disclaimer.appendChild(closeButton)
+  closeButton.onclick = () => disclaimer.parentNode.removeChild(disclaimer)
 }
 
 function init () {
