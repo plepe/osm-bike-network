@@ -21,6 +21,7 @@
   "dependencies": {
     "esmify": "^2.1.1",
     "leaflet": "^1.7.1",
+    "leaflet-polylinedecorator": "git+https://github.com/plepe/Leaflet.PolylineDecorator.git",
     "overpass-frontend": "git+https://github.com/plepe/overpass-frontend.git#history",
     "overpass-layer": "git+https://github.com/plepe/overpass-layer.git#history",
     "sprintf-js": "^1.1.2",
