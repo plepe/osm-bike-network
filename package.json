@@ -1,0 +1,19 @@
+{
+  "name": "osm-bike-network",
+  "version": "0.0.0",
+  "description": "Visualizes the bike network based on OpenStreetMap data. Optionally, it can show the development of the bike network too.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plepe/bike-route-network.git"
+  },
+  "author": "Stephan Bösch-Plepelits <skunk@xover.mud.at>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plepe/bike-route-network/issues"
+  },
+  "homepage": "https://github.com/plepe/bike-route-network#readme"
+}
