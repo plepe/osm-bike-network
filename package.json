@@ -4,7 +4,9 @@
   "description": "Visualizes the bike network based on OpenStreetMap data. Optionally, it can show the development of the bike network too.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "browserify -p esmify -g browserify-css src/app.js -o dist/app.js",
+    "prepar": "npm run build",
+    "watch": "watchify --debug -p esmify -g browserify-css src/app.js -o dist/app.js -v"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,15 @@
   },
   "homepage": "https://github.com/plepe/bike-route-network#readme",
   "dependencies": {
+    "esmify": "^2.1.1",
+    "leaflet": "^1.7.1",
     "overpass-frontend": "git+https://github.com/plepe/overpass-frontend.git#history",
-    "overpass-layer": "git+https://github.com/plepe/overpass-layer.git#history"
+    "overpass-layer": "git+https://github.com/plepe/overpass-layer.git#history",
+    "yaml": "^1.10.2"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "standard": "^16.0.4",
+    "watchify": "^4.0.0"
   }
 }

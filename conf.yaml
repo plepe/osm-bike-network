@@ -1,0 +1,8 @@
+defaultView:
+  lat: 48.2
+  lon: 16.4
+  zoom: 10
+overpass:
+  url: https://overpass-api.de/api/interpreter
+  options:
+    attic: false
